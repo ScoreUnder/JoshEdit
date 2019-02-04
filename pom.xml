@@ -7,8 +7,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <licenses>
@@ -19,9 +17,21 @@
   </licenses>
 
   <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+    </plugins>
     <resources>
       <resource>
-        <directory></directory>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>.</directory>
         <includes>
           <include>LICENSE</include>
           <include>README.md</include>
